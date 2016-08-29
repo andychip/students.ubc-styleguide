@@ -23,7 +23,7 @@ srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo
       <div class="main-nav padding-2">
         <nav>
           <ul class="">
-            <li><a href="/">💫 Nucleus</a></li>
+            <li><a href="../index.html">💫 Nucleus</a></li>
             <li class="active"><a href="./atoms">⚛ Atoms</a>
               <ul>
                 <li><a href="#buttons">Buttons</a></li>
@@ -124,17 +124,59 @@ srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo
 
       <section id="links">
         <h2>Links</h2>
-        <ul>
-          <li><a href="#">A link to somewhere</a></li>
-          <li><a href="#">A link to somewhere</a></li>
-          <ul>
-            <li><a href="#">A link to somewhere</a></li>
-            <li><a href="#">A link to somewhere</a></li>
-          </ul>
-          <li><a href="#">A link to somewhere</a></li>
-          <li><a href="#">A link to somewhere</a></li>
-          <li><a href="#">A link to somewhere</a></li>
-        </ul>
+        <div class="wrapper">
+          <div class="half">
+            <h3>Text link</h3>
+            <p><a href="#" class="campus">Link to somewhere</a></p>
+            <h3>External link <span>(add class .sr-only)</span></h3>
+            <p><a href="http://google.ca" class="campus"><span class="sr-only">Opens in new window</span>Link to somewhere</a></p>
+            <h3>Visted Links <span>(darken color 10%)</span></h3>
+            <p><a class="visited campus" href="#">visited link to somewhere</a><p>
+            <p><a class="visited plan" href="#">visited link to somewhere</a><p>
+          </div>
+          <div class="half">
+            <h3>Link with image list</h3>
+            <ul class="link-list--images campus">
+              <li><a href="#"><img src="http://fillmurray.com/64/48" /><p>A link to somewhere</p></a></li>
+              <li><a href="#"><img src="http://fillmurray.com/64/48" /><p>A link to somewhere that's on two lines</p></a></li>
+              <li><a href="#"><img src="http://fillmurray.com/64/48" /><p>A link to somewhere</p></a></li>
+              <li><a href="#"><img src="http://fillmurray.com/64/48" /><p>A link to somewhere</p></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="lists">
+        <h2>Lists</h2>
+        <div class="wrapper">
+          <div class="half">
+            <h3>&lt;ul&gt;</h3>
+            <ul class="ul-list">
+              <li><a href="#">A link to somewhere</a></li>
+              <li><a href="#">A link to somewhere</a></li>
+              <ul>
+                <li><a href="#">A link to somewhere</a></li>
+                <li><a href="#">A link to somewhere</a></li>
+              </ul>
+              <li><a href="#">A link to somewhere</a></li>
+              <li><a href="#">A link to somewhere</a></li>
+              <li><a href="#">A link to somewhere</a></li>
+            </ul>
+          </div>
+          <div class="half">
+            <h3>&lt;ol&gt;</h3>
+            <ol class="ol-list">
+              <li><a href="#">A link to somewhere</a></li>
+              <li><a href="#">A link to somewhere</a></li>
+              <ol>
+                <li><a href="#">A link to somewhere</a></li>
+                <li><a href="#">A link to somewhere</a></li>
+              </ol>
+              <li><a href="#">A link to somewhere</a></li>
+              <li><a href="#">A link to somewhere</a></li>
+              <li><a href="#">A link to somewhere</a></li>
+            </ol>
+          </div>
+        </div>
       </section>
 
     </div>

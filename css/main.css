@@ -136,6 +136,7 @@ table {
   min-height: 100vh;
   flex-direction: column;
   background: #f4f4f4;
+  border-right: 1px solid #e6e6e6;
 }
 .main-nav h3 {
   color: #002145;

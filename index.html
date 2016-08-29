@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <title>UBC Students Styleguide</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.sticky.js"></script>
+  <script>
+    $(window).load(function(){
+      $(".main-nav").sticky({ topSpacing: 0, widthFromWrapper: false, getWidthFrom: 'main-nav' });
+    });
+  </script>
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+</head>
+<body>
+  <header>
+    <img src="./images/ubc-logo.png"
+srcset="./images/ubc-logo.png 1x, ./images/ubc-logo.png 2x,
+./images/ubc-logo.png 3x">
+    <h2>students.ubc.ca Styleguide</h2>
+  </header>
+  <div class="wrapper">
+      <div class="main-nav padding-2">
+        <nav>
+          <ul class="">
+            <li class="active"><a href="#">💫 Nucleus</a>
+              <ul>
+                <li><a href="#colour-palette">Colour Palette</a></li>
+                <li><a href="#typography">Typography</a></li>
+              </ul>
+            </li>
+            <li><a href="./atoms">⚛ Atoms</a></li>
+            <li><a href="./molecules">💧 Molecules</a></li>
+            <li><a href="./organisms">🌿 Organisms</a></li>
+            <li><a href="./movement">💨 Movement</a></li>
+          </ul>
+        </nav>
+      </div>
+    <div class="main-content padding-2">
+      <h1>Welcome to the students.ubc.ca styleguide</h1>
+      <p>Using <a href="#">Brad Frosts' Atomic Design principles</a>, Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.</p>
+      <p>We have built upon the atoms, molecules and organisms metaphors by establishing a nucleus of type and colour, that the students site is built upon.</p>
+      <section id="colour-palette">
+        <h2>Colour palette</h2>
+        <div class="palette">
+          <div class="palette-color palette-color--ubc">
+            <p class="color">rgb(21,148,166)<br />hex: #1594A6</p>
+            <p class="color--less_variable">@ubc</p>
+          </div>
+          <div class="palette-color palette-color--students">
+            <p class="color">rgb(21,148,166)<br />hex: #1594A6</p>
+            <p class="color--less_variable">@students</p>
+          </div>
+          <div class="palette-color palette-color--campus">
+            <p class="color">rgb(21,148,166)<br />hex: #1594A6</p>
+            <p class="color--less_variable">@campus</p>
+          </div>
+          <div class="palette-color palette-color--plan">
+            <p class="color">rgb(21,148,166)<br />hex: #1594A6</p>
+            <p class="color--less_variable">@plan</p>
+          </div>
+          <div class="palette-color palette-color--live">
+            <p class="color">rgb(21,148,166)<br />hex: #1594A6</p>
+            <p class="color--less_variable">@live</p>
+          </div>
+          <div class="palette-color palette-color--fun">
+            <p class="color">rgb(21,148,166)<br />hex: #1594A6</p>
+            <p class="color--less_variable">@fun</p>
+          </div>
+          <div class="palette-color palette-color--career">
+            <p class="color">rgb(21,148,166)<br />hex: #1594A6</p>
+            <p class="color--less_variable">@career</p>
+          </div>
+          <div class="palette-color palette-color--enrol">
+            <p class="color">rgb(21,148,166)<br />hex: #1594A6</p>
+            <p class="color--less_variable">@enrol</p>
+          </div>
+      </section>
+
+      <section id="typography">
+        <h2>Typography</h2>
+        <div class="typography">
+          <div class="type-scale">
+            <div class="type-block">
+              <span class="h0">A</span>
+              <div class="type-desc">Medium</div>
+            </div>
+            <div class="type-block h0-sb">
+              <span>A</span>
+              <div class="type-desc">Semibold</div>
+            </div>
+            <div class="type-block type-block--whitney">
+              Whitney
+            </div>
+          </div>
+          <div class="type-modularscale">
+            <h3>Modular Scale</h3>
+            <p>We use different modular scales dependent on screen sizes, all with a base of 16px (1em), to enable harmonised typography across devices.</p>
+          </div>
+            <h4>Breakpoints</h4>
+            <p>&gt; 1280 - Major Third (css shown below)</p>
+            <p>&gt; 768 - Minor Third</p>
+            <p>&gt; 480 - Major Second</p>
+            <div class="type-lineheight--gt768">
+              <h1>This is a heading H1</h1> <code>font-size: 2.441rem;<br />line-height: 3.3125rem;</code>
+              <h2>This is a heading H2</h2> <code>font-size: 1.953rem;<br />line-height 2.75rem;</code>
+              <h3>This is a heading H3</h3> <code>font-size: 1.563rem;<br />line-height 2.25rem;</code>
+              <h4>This is a heading H4</h4> <code>font-size: 1.25rem;<br />line-height 1.9375rem;</code>
+              <h5>This is a heading H5</h5> <code>font-size: 1rem;<br />line-height: 1.6875rem;<br />text-transform: uppercase;<br /></code>
+              <h6>This is a heading H6</h6> <code>font-size: 0.8rem;<br />line-height 1.5rem;<br />text-transform: uppercase;</code>
+              <p>This is a paragraph</p> <code>font-size: 1rem;<br />line-height 1.6875rem;</code>
+              <p>Our ideal paragraph width should be between 50 and 75 characters (approx. 25-38em), with an target of 66 characters.</p>
+            </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>

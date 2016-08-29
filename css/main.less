@@ -1,0 +1,432 @@
+//out: main.css
+@import "reset.less";
+@import "grid.less";
+@import "typography.less";
+@import "palette.less";
+
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html:before,html:after,body:before,body:after{
+    content:"";
+    background:@white;
+    position:fixed;
+    display:block;
+    z-index:5;
+}
+
+html:before{
+    height:16px;
+    left:0;
+    right:0;
+    top:0;
+}
+html:after{
+    width:16px;
+    top:0;
+    right:0;
+    bottom:0;
+}
+body:before{
+    height:16px;
+    right:0;
+    bottom:0;
+    left:0;
+}
+body:after{
+    width:16px;
+    top:0;
+    bottom:0;
+    left:0;
+}
+
+body {
+    background: #f9f9f9;
+    overflow-x: hidden;
+}
+
+section {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+
+/*
+/* header
+*/
+
+header {
+  padding: 2rem 2rem 1rem;
+  background: @ubc;
+  img {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  h2 {
+    color: @white;
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+
+/*
+/* main nav
+*/
+
+.main-nav {
+  nav {
+    ul {
+      margin-top: 0rem;
+      li {
+        border-bottom: 1px solid @lightgrey;
+        position: relative;
+        &.active {
+          a {
+            color: @white;
+          }
+          &:before {
+              width: 100%;
+          }
+        }
+        &:before {
+          width: 4px;
+          background: @ubc;
+          height: 100%;
+          content: '';
+          top: 0;
+          left: 0;
+          position: absolute;
+          -webkit-transition: all 0.4s cubic-bezier(.93,.05,.69,1);
+          transition: all 0.4s cubic-bezier(.93,.05,.69,1.21);
+        }
+        &:hover {
+          &:before {
+              width: 100%;
+              background: @students;
+          }
+        }
+        a {
+          color: @students;
+          padding: 1rem 1rem;
+          text-decoration: none;
+          position: relative;
+          width: 100%;
+          display: block;
+          -webkit-transition: all 0.4s cubic-bezier(.93,.05,.69,1);
+          transition: all 0.4s cubic-bezier(.93,.05,.69,1.21);
+          &:before {
+
+
+          }
+          &:hover {
+            color: @white;
+            -webkit-transition: all 0.4s cubic-bezier(.93,.05,.69,1);
+            transition: all 0.4s cubic-bezier(.93,.05,.69,1.21);
+          }
+        }
+      }
+      ul {
+        margin-top: 0;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        li {
+          border: none;
+          &:first-of-type {
+            a {
+            padding-top: 0;
+            }
+          }
+          &:before {
+            height: 0;
+          }
+          &.active {
+            &:after {
+              width: 0px;
+            }
+          }
+          a {
+            padding: 0.4rem 2rem;
+            font-size: 0.8rem;
+            &:before {
+              content: '';
+            }
+            &:hover {
+              text-decoration: underline;
+              &:before {
+                  width: 100%;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*************/
+/*  nucleus  */
+/*           */
+
+
+/*
+/* colour palette
+*/
+
+.palette {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-end;
+
+  .palette-color {
+    height: 8rem;
+    width: 12rem;
+    margin: 0 1rem 1rem 0;
+    position: relative;
+
+    p {
+      color: @white;
+      position: absolute;
+      font-size: 0.8rem;
+    }
+    .color {
+      top: 1rem;
+      left: 1rem;
+    }
+    .color--less_variable {
+      bottom: 1rem;
+      left: 1rem;
+      margin-bottom: 0;
+    }
+  }
+  .palette-color--campus {
+    background: @campus;
+  }
+  .palette-color--plan{
+    background: @plan;
+  }
+  .palette-color--live{
+    background: @live;
+  }
+  .palette-color--fun{
+    background: @fun;
+  }
+  .palette-color--career{
+    background: @career;
+  }
+  .palette-color--enrol{
+    background: @enrol;
+  }
+  .palette-color--students{
+    background: @students;
+  }
+  .palette-color--ubc{
+    background: @ubc;
+  }
+
+}
+
+/*
+/* typography
+*/
+
+.typography {
+  .type-scale {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    }
+    .type-block {
+      border: 1px solid @ubc;
+      text-align: center;
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 2rem;
+      &.h0-sb {
+        span, .type-desc {
+          font-weight: 600;
+        }
+      }
+      span {
+        font-size: 144px;
+        color: @ubc;
+        font-weight: 300;
+        line-height: 144px;
+        padding: 0 1rem;
+        @media screen and (max-width: 768px) {
+          font-size: 96px;
+          line-height: 96px;
+        }
+        }
+      .type-desc {
+        background: @ubc;
+        color: @white;
+        padding: 0.4rem 0.4rem;
+      }
+    }
+    .type-block--whitney {
+      border: none;
+      font-size: 144px;
+      line-height: 144px;
+      color: @ubc;
+      align-items: center;
+      font-weight: 300;
+      @media screen and (max-width: 768px) {
+        font-size: 96px;
+        line-height: 96px;
+      }
+    }
+    .type-lineheight {
+      .type-linheight--gt768 {
+        display: inline-block;
+      }
+    }
+}
+
+/***********/
+/*  atoms  */
+/*         */
+
+/*
+/* buttons
+*/
+
+
+.btn-surround {
+  background: #fff;
+  z-index: 1;
+  display:inline-block;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  &:after {
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    -webkit-transition: all 0.4s cubic-bezier(.93,.05,.69,1);
+    transition: all 0.4s cubic-bezier(.93,.05,.69,1.21);
+    z-index:1;
+    border-radius: 1px 0 0 1px;
+  }
+  &:hover {
+    span {
+      color:white !important;
+      border-radius: 2px;
+    }
+    &:after {
+      width: 100%;
+      -webkit-transition: all 0.4s cubic-bezier(.93,.05,.69,1);
+      transition: all 0.4s cubic-bezier(.93,.05,.69,1.25);
+      border-radius: 2px;
+    }
+  }
+
+    /* -  themes  - */
+
+  &.campus {
+    &:after {
+      background: @campus;
+    }
+    border: 1px solid @campus;
+    &:focus {
+      outline-color: @campus;
+    }
+  }
+
+  &.plan {
+    &:after {
+      background: @plan;
+    }
+    border: 1px solid @plan;
+    &:focus {
+      outline-color: @plan;
+    }
+  }
+
+  &.live {
+    &:after {
+      background: @live;
+    }
+    border: 1px solid @live;
+    &:focus {
+      outline-color: @live;
+    }
+  }
+
+  &.fun {
+    &:after {
+      background: @fun;
+    }
+    border: 1px solid @fun;
+    &:focus {
+      outline-color: @fun;
+    }
+  }
+
+  &.career {
+    &:after {
+      background: @career;
+    }
+    border: 1px solid @career;
+    &:focus {
+      outline-color: @career;
+    }
+  }
+
+  &.enrol {
+    &:after {
+      background: @enrol;
+    }
+  border: 1px solid @enrol;
+    &:focus {
+      outline-color: @enrol;
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+    color: #002145;
+       &:hover {
+        color:white;
+        transition: all 0.4s ease-in;
+       }
+    }
+}
+/* -  Size  - */
+
+  a.small {
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+  }
+
+  a.medium {
+    padding: 1rem 1.8rem;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    &:after {
+      width: 6px;
+      border-radius: 2px 0 0 2px;
+    }
+  }
+
+  a.large {
+    padding: 1.6rem 2.4rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    &:after {
+       width: 8px;
+       border-radius: 3px 0 0 3px;
+    }
+  }

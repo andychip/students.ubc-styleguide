@@ -131,8 +131,29 @@ srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo
             <h3>External link <span>(add class .sr-only)</span></h3>
             <p><a href="http://google.ca" class="campus"><span class="sr-only">Opens in new window</span>Link to somewhere</a></p>
             <h3>Visted Links <span>(darken color 10%)</span></h3>
-            <p><a class="visited campus" href="#">visited link to somewhere</a><p>
-            <p><a class="visited plan" href="#">visited link to somewhere</a><p>
+            <p><a class="visited campus" href="#">visited link to somewhere</a></p>
+            <p><a class="visited plan" href="#">visited link to somewhere</a></p>
+            <h3>File Links</h3>
+            <ul class="file-links campus">
+              <li><a href="111.pdf">A pdf document link (pdf)</a></li>
+              <li><a href="111.xlsx">A excel document link (xlsx)</a></li>
+              <li><a href="111.pptx">A powerpoint document link (pptx)</a></li>
+            </ul>
+            <h3>Anchored page links</h3>
+            <p>Anchored links should scroll rather than jump so that users know they are on the same page. Also require for accessibility: <code class="inline">&lt;li class="sr-only"&gt;&lt;a href="#content"&gt;skip to content&lt;/a&gt;&lt;/li&gt;</code></p>
+            <div class="anchored-list">
+              <h4>On this page</h4>
+              <ul class="campus">
+                <li class="sr-only"><a href="#content">skip to content</a></li>
+                <li><a href="#">A link to somewhere</a></li>
+                <li><a href="#">A link to somewhere</a></li>
+                <li><a href="#">A link to somewhere</a></li>
+                <li><a href="#">A link to somewhere</a></li>
+                <li><a href="#">A link to somewhere</a></li>
+                <li><a href="#">A link to somewhere</a></li>
+                <li class="back-to-top"><a href="#top">Back to top</a></li>
+              </ul>
+            </div>
           </div>
           <div class="half">
             <h3>Link with image list</h3>
@@ -142,6 +163,7 @@ srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo
               <li><a href="#"><img src="http://fillmurray.com/64/48" /><p>A link to somewhere</p></a></li>
               <li><a href="#"><img src="http://fillmurray.com/64/48" /><p>A link to somewhere</p></a></li>
             </ul>
+
           </div>
         </div>
       </section>
@@ -161,7 +183,15 @@ srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo
               <li>A link to somewhere</li>
               <li>A link to somewhere</li>
             </ul>
+
+            <h3>Theme list</h3>
+            <ul class="theme-list live">
+              <li>Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
+              <li>Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+              <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
+            </ol>
           </div>
+
           <div class="half">
             <h3>&lt;ol&gt;</h3>
             <ol class="ol-list campus">
@@ -178,26 +208,8 @@ srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo
           </div>
         </div>
 
-        <h3>Anchored page links</h3>
-        <p>Anchored links should scroll rather than jump so that users know they are on the same page. Also require for accessibility: <code class="inline">&lt;li class="sr-only"&gt;&lt;a href="#content"&gt;skip to content&lt;/a&gt;&lt;/li&gt;</code></p>
-        <div class="anchored-list">
-          <h4>On this page</h4>
-          <ul class="campus">
-            <li class="sr-only"><a href="#content">skip to content</a></li>
-            <li><a href="#">A link to somewhere</a></li>
-            <li><a href="#">A link to somewhere</a></li>
-            <li><a href="#">A link to somewhere</a></li>
-            <li><a href="#">A link to somewhere</a></li>
-            <li><a href="#">A link to somewhere</a></li>
-            <li><a href="#">A link to somewhere</a></li>
-            <li class="back-to-top"><a href="#top">Back to top</a></li>
-          </ul>
-        </div>
-        <h3>File Links</h3>
-        <ul class="file-links campus">
-          <li><a href="111.pdf">A pdf document link (pdf)</a></li>
-          <li><a href="111.xlsx">A excel document link (xlsx)</a></li>
-          <li><a href="111.pptx">A powerpoint document link (pptx)</a></li>
+
+
       </section>
 
       <section id="sections">
@@ -205,9 +217,35 @@ srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo
         <h3>Separate</h3>
         <hr />
         <h3>Separate with header</h3>
+        <h4 class="separator-header">This is a sectional header</h4>
         <h3>Inverse - stretch &amp; sectional</h3>
+        <section class="section-inverse section-stretch">
+          <h3>This is an inverse section</h3>
+          <p>Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        </section>
         <h3>Highlight - stretch &amp; sectional</h3>
+        <section class="section-highlight section-stretch section-highlight--career">
+          <h3>This is a careers highlight section</h3>
+          <p>Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        </section>
       </section>
+
+      <section id="tables">
+        <h2>Tables</h2>
+        <table cellspacing="0" cellpadding="0" border="0">
+          <thead>
+            <tr>
+              <th>Column Name</th>
+              <th>Column Name</th>
+              <th>Column Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>table data</td><td>table data</td><td>table data</td></tr>
+            <tr><td>table data</td><td>table data</td><td>table data</td></tr>
+            <tr><td>table data</td><td>table data</td><td>table data</td></tr>
+          </tbody>
+        </table>
     </div>
   </div>
 

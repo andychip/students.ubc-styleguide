@@ -6,14 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script type="text/javascript" src="../js/jquery.sticky.js"></script>
+
+
   <script>
     $(window).load(function(){
       $(".main-nav").sticky({ topSpacing: 0, widthFromWrapper: false, getWidthFrom: 'main-nav' });
+      $('body').removeClass('fade-out');
     });
+
   </script>
+  <script>document.body.className += ' fade-out';</script>
   <link rel="stylesheet" type="text/css" href="../css/main.css" />
 </head>
 <body>
+  <script>document.body.className += ' fade-out';</script>
   <header>
     <img src="../images/ubc-logo.png"
 srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo.png 3x">
@@ -232,6 +238,9 @@ srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo
 
       <section id="tables">
         <h2>Tables</h2>
+        <p>Table use should be determined by the content. If possible, no more than
+3 columns and 2 lines of content per cell to ensure it renders well on mobile.
+If necessary use abbreviations but keep consistent throughout. </p>
         <table cellspacing="0" cellpadding="0" border="0">
           <thead>
             <tr>
@@ -246,6 +255,30 @@ srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo
             <tr><td>table data</td><td>table data</td><td>table data</td></tr>
           </tbody>
         </table>
+      </section>
+
+      <section id="text">
+        <p>No repetition of content, the following three should be unique pieces of content</p>
+        <h3>Blockquote</h3>
+        <blockquote class="live">
+          <p>"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit."</p>
+          <cite>A person who said this</cite>
+        </blockquote>
+        <h3>Callout</h3>
+        <div class="callout live">
+          <p>Listen to your body and give yourself enough recovery time between sessions.</p>
+        </div>
+        <h3>Shoutout</h3>
+        <div class="shoutout live">
+          <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+        </div>
+        <h3>Paragraph</h3>
+        <p>Ideal paragraph width should be between 50 and 75 characters (approx 25-38em), with an ideal of 66 characters.</p>
+        <hr />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit cras mattis consectetur purus sit amet fermentum. Donec sed odio dui.</p>
+
+        <p>Praesent commodo cursus magna, <a href="http://google.ca" class="campus">vel scelerisque nisl</a> consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue.</p>
+      </section>
     </div>
   </div>
 

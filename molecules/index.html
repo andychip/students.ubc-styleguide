@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <title>UBC Students Styleguide - molecules</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.sticky.js"></script>
+
+
+  <script>
+    $(window).load(function(){
+      $(".main-nav").sticky({ topSpacing: 0, widthFromWrapper: false, getWidthFrom: 'main-nav' });
+      $('body').removeClass('fade-out');
+    });
+
+  </script>
+  <script>document.body.className += ' fade-out';</script>
+  <link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+<body>
+  <script>document.body.className += ' fade-out';</script>
+  <header>
+    <img src="../images/ubc-logo.png"
+srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo.png 3x">
+    <h2>students.ubc.ca Styleguide</h2>
+  </header>
+  <div class="wrapper">
+      <div class="main-nav padding-2">
+        <nav>
+          <ul class="">
+            <li><a href="../index.html">💫 Nucleus</a></li>
+            <li><a href="./atoms">⚛ Atoms</a></li>
+            <li class="active"><a href="./molecules">💧 Molecules</a></li>
+            <li><a href="./organisms">🌿 Organisms</a></li>
+            <li><a href="./movement">💨 Movement</a></li>
+          </ul>
+        </nav>
+      </div>
+    <div class="main-content padding-2">
+      <h1>Molecules</h1>
+      <p>Molecules are a combination of atoms and nuclei</p>
+      <section id="accordion">
+        <h2>Accordion</h2>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>

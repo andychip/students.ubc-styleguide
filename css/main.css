@@ -166,7 +166,7 @@ body {
 */
 h1 {
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 @media screen and (min-width: 769px) {
   h1 {
@@ -188,7 +188,7 @@ h1 {
 }
 h2 {
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 @media screen and (min-width: 769px) {
   h2 {
@@ -210,7 +210,7 @@ h2 {
 }
 h3 {
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 @media screen and (min-width: 769px) {
   h3 {
@@ -232,7 +232,7 @@ h3 {
 }
 h4 {
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 @media screen and (min-width: 769px) {
   h4 {
@@ -255,7 +255,7 @@ h4 {
 h5 {
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 @media screen and (min-width: 769px) {
   h5 {
@@ -278,7 +278,7 @@ h5 {
 h6 {
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 @media screen and (min-width: 769px) {
   h6 {
@@ -393,6 +393,12 @@ body:after {
 body {
   background: #fcfcfc;
   overflow-x: hidden;
+  opacity: 1;
+  transition: 1.6s opacity;
+}
+body.fade-out {
+  opacity: 0;
+  transition: 0.4s opacity;
 }
 section {
   margin-bottom: 2rem;
@@ -413,6 +419,21 @@ header h2 {
   color: #ffffff;
   display: inline-block;
   position: absolute;
+}
+p a.campus {
+  color: #1594a6;
+}
+a[href="http://google.ca"] {
+  position: relative;
+  padding-right: 0.6rem;
+}
+a[href="http://google.ca"]:after {
+  content: url(images/icon-external-link.svg);
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  top: 2px;
+  left: 6px;
 }
 /*
 /* main nav
@@ -706,7 +727,7 @@ header h2 {
 /* -  Size  - */
 a.small {
   padding: 0.5rem 1rem;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 a.medium {
   padding: 1rem 1.8rem;
@@ -732,17 +753,6 @@ a.large:after {
 #links ul,
 #links ol {
   margin-bottom: 2rem;
-}
-#links a[href="http://google.ca"] {
-  position: relative;
-}
-#links a[href="http://google.ca"]:after {
-  content: url(images/icon-external-link.svg);
-  width: 1rem;
-  height: 1rem;
-  position: relative;
-  top: 2px;
-  left: 6px;
 }
 #links a {
   -webkit-transition: all 0.4s ease-in;
@@ -798,6 +808,9 @@ a.large:after {
   width: 240px;
   margin-bottom: 2rem;
   background: #ffffff;
+}
+#links .anchored-list ul {
+  margin-bottom: 0;
 }
 #links .anchored-list li {
   margin-bottom: 1rem;
@@ -939,6 +952,9 @@ a.large:after {
 /*
 /* tables
 */
+table {
+  margin: 2rem 0;
+}
 table thead {
   border-bottom: 1px solid #eeeeee;
 }
@@ -973,4 +989,57 @@ table tbody tr td:last-of-type {
 }
 table tbody tr td:not(:first-of-type) {
   padding-left: 1rem;
+}
+/*
+/* Paragraph
+*/
+blockquote {
+  border: 1px solid #eeeeee;
+  border-left: 4px solid #58a229;
+  padding: 2rem 2rem 2.6rem;
+  border-radius: 3px;
+  max-width: 28rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+blockquote cite {
+  text-transform: uppercase;
+  color: #58a229;
+  position: absolute;
+  right: 2rem;
+  font-size: 0.8rem;
+}
+blockquote cite:before {
+  content: '- ';
+}
+.callout {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 2rem;
+  max-width: 28rem;
+  margin-bottom: 2rem;
+}
+.callout p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0;
+}
+.callout.live {
+  color: #58a229;
+}
+.shoutout {
+  margin-bottom: 2rem;
+}
+.shoutout p {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 0;
+  max-width: 44rem;
+}
+.shoutout.live {
+  color: #58a229;
 }

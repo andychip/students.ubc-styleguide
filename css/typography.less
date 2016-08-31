@@ -129,7 +129,9 @@ p {
     line-height: 1.500rem;
   }
 }
-
+.code-block {
+  display: flex;
+}
 code {
   font-family: monospace;
   padding: 1rem;
@@ -140,6 +142,7 @@ code {
   margin-bottom: 2rem;
   line-height: 1.5rem;
   max-width: 400px;
+  flex: 1;
 }
 
 code.inline {
@@ -148,6 +151,7 @@ code.inline {
   white-space: pre;
   line-height: 1.2rem;
   margin-bottom: 0;
+  flex: none;
 }
 
 h3 span {

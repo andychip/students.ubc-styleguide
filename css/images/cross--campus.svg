@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="13px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Students---Atomic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Molecules" transform="translate(-535.000000, -230.000000)" fill="#1594A6">
+            <g id="Group-2" transform="translate(540.960155, 236.500000) rotate(45.000000) translate(-540.960155, -236.500000) translate(532.960155, 229.000000)">
+                <path d="M7,14 C7,14.5522847 7.44771525,15 8,15 C8.55228475,15 9,14.5522847 9,14 L9,1 C9,0.44771525 8.55228475,0 8,0 C7.44771525,0 7,0.44771525 7,1 L7,14 Z" id="Line"></path>
+                <path d="M7,14 C7,14.5522847 7.44771525,15 8,15 C8.55228475,15 9,14.5522847 9,14 L9,1 C9,0.44771525 8.55228475,-1.13686838e-13 8,-1.13686838e-13 C7.44771525,-1.13686838e-13 7,0.44771525 7,1 L7,14 Z" id="Line" transform="translate(8.000000, 7.500000) rotate(-270.000000) translate(-8.000000, -7.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

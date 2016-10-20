@@ -1107,6 +1107,7 @@ blockquote cite:before {
   border-style: solid;
   background: #ffffff;
   border-top: none;
+  border-radius: 0 0 3px 3px ;
 }
 #alerts .alert.page-alert .alert-header {
   background: #cb1d38;

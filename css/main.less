@@ -1059,11 +1059,7 @@ blockquote {
   }
 }
 
-.z.brick-thumb {
-  &:after {
-    width: 24px;
-  }
-}
+
 
 .brick-text {
   display: inline-block;
@@ -1073,7 +1069,7 @@ blockquote {
     margin-bottom: 0;
   }
 
-.date {
+.brick-date {
   margin-top: 1rem;
   display: block;
   font-size: 0.8rem;
@@ -1149,14 +1145,31 @@ blockquote {
 
 .small {
   }
-  .g-item--medium {
-    .block-text {
-      vertical-align: top;
-      h2 {
-        margin-top: 0;
+.brick-item--medium {
+  .brick-meta {
+    .brick-date {
+      margin-top: 0;
+    }
+  }
+  .brick-text {
+    vertical-align: top;
+    h2 {
+      margin-top: 0;
+    }
+    .brick-date, .brick-desc {
+      color: @ubc !important;
+    }
+  }
+  .brick-link {
+    &:hover {
+      .brick-thumb {
+        &:after {
+          width: 24px;
+        }
       }
     }
   }
+}
 
 .large {}
 
@@ -1165,11 +1178,11 @@ blockquote {
   &.campus {
     .brick-thumb {
       &:after {
-        background: #1594a6;
+        background: @fun;
       }
     }
     h2 {
-      color: #1594a6;
+      color: @fun;
     }
 
   }

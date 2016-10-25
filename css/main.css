@@ -1277,9 +1277,6 @@ blockquote cite:before {
   transition: all 0.2s cubic-bezier(0.8, 0.1, 0.9, 1);
   border-radius: 3px 0 0 3px;
 }
-.z.brick-thumb:after {
-  width: 24px;
-}
 .brick-text {
   display: inline-block;
   margin-left: 1rem;
@@ -1287,7 +1284,7 @@ blockquote cite:before {
 h2 {
   margin-bottom: 0;
 }
-.date {
+.brick-date {
   margin-top: 1rem;
   display: block;
   font-size: 0.8rem;
@@ -1344,18 +1341,28 @@ h2 {
   color: white;
 }
 /* Size */
-.g-item--medium .block-text {
+.brick-item--medium .brick-meta .brick-date {
+  margin-top: 0;
+}
+.brick-item--medium .brick-text {
   vertical-align: top;
 }
-.g-item--medium .block-text h2 {
+.brick-item--medium .brick-text h2 {
   margin-top: 0;
+}
+.brick-item--medium .brick-text .brick-date,
+.brick-item--medium .brick-text .brick-desc {
+  color: #002145 !important;
+}
+.brick-item--medium .brick-link:hover .brick-thumb:after {
+  width: 24px;
 }
 /* Themes */
 .brick.campus .brick-thumb:after {
-  background: #1594a6;
+  background: #cb1d38;
 }
 .brick.campus h2 {
-  color: #1594a6;
+  color: #cb1d38;
 }
 .brick.plan .brick-thumb:after {
   background: #f38b00;

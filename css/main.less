@@ -1005,6 +1005,7 @@ blockquote {
 /*
 /* bricks
 */
+
 #brick {
 
   .brick{
@@ -1020,7 +1021,7 @@ blockquote {
 
   .brick-link {
     display: inline-block;
-    position: relative;;
+    position: relative;
     width: 100%;
     height: 100%;
     top: 0px;
@@ -1072,12 +1073,12 @@ blockquote {
     display: inline-block;
     margin-left: 1rem;
     }
-    
 
-  .brick-date {
+
+  .brick-optional {
     margin-top: 1rem;
     display: block;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 0.4rem;
   }
 
@@ -1086,8 +1087,20 @@ blockquote {
   }
 
   .brick-desc {
-    width: 200px;
     font-size: 0.9rem;
+
+  }
+
+  .brick-item--large, .brick-item--medium-contained {
+    .brick-title, .brick-desc {
+      width: calc(~"100% - 2rem");
+    }
+  }
+
+  .brick-item--medium, .brick-item--medium-contained, .brick-item--small {
+    .brick-optional {
+      font-size: 0.8rem;
+    }
   }
 
   .brick-item--large, .brick-item--medium-contained, .brick-item--full {
@@ -1130,17 +1143,21 @@ blockquote {
 
         .brick-title {
           color: white;
-          margin-bottom: 0.6rem;
+          margin-bottom: 1rem;
         }
 
         .brick-desc {
-          width: 80%;
           color: white;
           line-height: 1.25rem;
         }
       }
     }
   }
+  }
+  .brick-item--large {
+    .brick-title {
+      line-height: 2.3rem;
+    }
   }
 
   /* Size */
@@ -1150,7 +1167,16 @@ blockquote {
         margin-left: 0;
           .brick-desc {
           margin-bottom: 1rem;
+
           }
+      }
+      .brick-title {
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
 
@@ -1166,13 +1192,13 @@ blockquote {
       .brick-detail {
         left: 0.4rem !important;
         bottom: 0.4rem !important;
-        width: 90%;
+
       }
   }
   .brick-item--medium, .brick-item--small {
     margin-bottom: 2rem;
     .brick-meta {
-      .brick-date {
+      .brick-optional {
         margin-top: 0;
         margin-bottom: 0;
       }
@@ -1180,15 +1206,18 @@ blockquote {
     .brick-text {
       vertical-align: top;
       margin-bottom: 0;
+      width: 200px;
       h2 {
         margin-top: 0;
         font-size: 1.3rem;
         line-height: 1.6rem;
         margin-bottom: 1rem;
+        width: calc(100% - 2rem);
       }
-      .brick-date, .brick-desc {
+      .brick-optional, .brick-desc {
         color: @ubc !important;
         line-height: 1.25rem;
+        width: 200px;
       }
     }
     .brick-link {
@@ -1220,8 +1249,11 @@ blockquote {
       }
       .brick-text {
         font-size: 1rem;
+        .brick-title {
+          line-height: 2.3rem;
+        }
         .brick-desc {
-          width: 100%;
+          width: 60%;
           margin-bottom: 1rem;
         }
       }
@@ -1249,6 +1281,9 @@ blockquote {
       }
       h2 {
         color: @campus;
+        a {
+          color: @campus;
+        }
       }
 
     }
@@ -1264,6 +1299,9 @@ blockquote {
       }
       h2 {
         color: @plan;
+        a {
+          color: @plan;
+        }
       }
     }
 
@@ -1278,6 +1316,9 @@ blockquote {
       }
       h2 {
         color: @live;
+        a {
+          color: @live;
+        }
       }
     }
 
@@ -1292,6 +1333,9 @@ blockquote {
       }
       h2 {
         color: @fun;
+        a {
+          color: @fun;
+        }
       }
     }
 
@@ -1306,6 +1350,9 @@ blockquote {
       }
       h2 {
         color: @career;
+        a {
+          color: @career;
+        }
       }
     }
 
@@ -1319,7 +1366,139 @@ blockquote {
         }
       }
       h2 {
-        color: #23499c;
+        color: @enrol;
+        a {
+          color: @enrol;
+        }
+      }
+    }
+  }
+}
+
+/*
+/* Profiles
+*/
+
+#profile {
+  .brick{
+    display: inline-block;
+    position: relative;
+  }
+
+  .inline-block {
+    display: inline-block;
+    position: relative;
+  }
+
+
+  .brick-link {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 15;
+    margin-bottom: 2rem;
+  }
+
+  .brick-thumb {
+    position: relative;
+    z-index: 9;
+    display: inline-block;
+    margin-bottom: 0;
+    border-radius: 10px;
+    img {
+      display: block;
+      border-radius: 3px 0 0 3px;
+      width: 100%;
+      height: auto;
+    }
+
+    &:before {
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      border-radius: 3px;
+    }
+    &:after {
+      width: 4px;
+      height: 100%;
+      content: '';
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transition: all 0.2s cubic-bezier(.80, .1, .9, 1);
+      transition: all 0.2s cubic-bezier(.80, .10, .9, 1);
+      border-radius: 3px 0 0 3px;
+    }
+  }
+
+  .brick-optional {
+    margin-top: 1rem;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .brick-title {
+    margin-top: 0px;
+    line-height: 2.3rem;
+  }
+
+  .brick-text {
+    margin-left: 1rem;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    width: calc(100% - 2rem);
+    height: 100%;
+
+    .brick-meta {
+      top: 1rem;
+      left: 1rem;
+      position: absolute;
+      color: white;
+      z-index: 10;
+    }
+
+    .brick-detail {
+      left: 1rem;
+      position: absolute;
+      bottom: 2rem;
+      z-index: 10;
+
+      .brick-title {
+        color: white;
+        margin-bottom: 0.6rem;
+      }
+    }
+  }
+  .brick-desc {
+    color: @ubc;
+
+  }
+
+  .brick-item--profile {
+    &.campus {
+      .brick-thumb {
+        &:before {
+          background-image: linear-gradient(-180deg, rgba(62,207,227,0.60) 0%, rgba(11,105,119,0.71) 100%);
+        }
+        &:after {
+          background: @campus;
+        }
+      }
+      h2 {
+        color: @campus;
       }
     }
   }

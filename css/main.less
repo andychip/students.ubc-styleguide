@@ -442,12 +442,12 @@ a[href="http://google.ca"] {
 }
 /* -  Size  - */
 
-  a.small {
+  a.btn-small {
     padding: 0.5rem 1rem;
     border-radius: 3px;
   }
 
-  a.medium {
+  a.btn-medium {
     padding: 1rem 1.8rem;
     font-size: 1.1rem;
     border-radius: 3px;
@@ -457,7 +457,7 @@ a[href="http://google.ca"] {
     }
   }
 
-  a.large {
+  a.btn-large {
     padding: 1.6rem 2.4rem;
     font-size: 1.2rem;
     border-radius: 4px;
@@ -1033,6 +1033,12 @@ blockquote {
   display: inline-block;
   margin-bottom: 0;
   border-radius: 10px;
+  img {
+    display: block;
+    border-radius: 3px 0 0 3px;
+    width: 100%;
+    height: auto;
+  }
 
   &:before {
     background: rgba(0, 0, 0, 0.6);
@@ -1085,7 +1091,7 @@ blockquote {
   font-size: 0.9rem;
 }
 
-.brick-item--large {
+.brick-item--large, .brick-item--medium-contained, .brick-item--full {
   margin-bottom: 2rem;
   display: inline-block;
 
@@ -1099,11 +1105,7 @@ blockquote {
       }
     }
 
-  .z.brick-thumb {
-    &:after {
-      width:100%;
-    }
-  }
+
   .brick-text {
     z-index: 10;
     left: 0;
@@ -1135,6 +1137,7 @@ blockquote {
       .brick-desc {
         width: 80%;
         color: white;
+        line-height: 1.25rem;
       }
     }
   }
@@ -1143,96 +1146,175 @@ blockquote {
 
 /* Size */
 
-.small {
+.brick-item--small {
+    .brick-text {
+      margin-left: 0;
+        .brick-desc {
+        margin-bottom: 1rem;
+        }
+    }
   }
-.brick-item--medium {
+
+.brick-item--medium-contained {
+  .brick-meta {
+    left: 0.4rem !important;
+    top: 0.4rem !important;
+  }
+  h2 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    }
+    .brick-detail {
+      left: 0.4rem !important;
+      bottom: 0.4rem !important;
+      width: 90%;
+    }
+}
+.brick-item--medium, .brick-item--small {
+  margin-bottom: 2rem;
   .brick-meta {
     .brick-date {
       margin-top: 0;
+      margin-bottom: 0;
     }
   }
   .brick-text {
     vertical-align: top;
+    margin-bottom: 0;
     h2 {
       margin-top: 0;
+      font-size: 1.3rem;
+      line-height: 1.6rem;
+      margin-bottom: 1rem;
     }
     .brick-date, .brick-desc {
       color: @ubc !important;
+      line-height: 1.25rem;
     }
   }
   .brick-link {
+    .brick-title {
+      text-decoration: none;
+    }
     &:hover {
       .brick-thumb {
         &:after {
           width: 24px;
         }
       }
+      .brick-title {
+        text-decoration: underline;
+      }
     }
   }
 }
 
-.large {}
+.brick-item--full {
+  .brick-link {
+    .brick-thumb {
+      img {
+        border-radius: 0;
+      }
+      &:after {
+        width: 0px;
+      }
+    }
+    .brick-text {
+      font-size: 1rem;
+      .brick-desc {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+    &:hover {
+      .brick-thumb {
+        &:after {
+          width: 0px;
+        }
+      }
+    }
+  }
+}
 
-/* Themes */
+
+/* Brick Themes */
 .brick {
   &.campus {
     .brick-thumb {
+      &:before {
+        background-image: linear-gradient(-180deg, rgba(62,207,227,0.60) 0%, rgba(11,105,119,0.71) 100%);
+      }
       &:after {
-        background: @fun;
+        background: @campus;
       }
     }
     h2 {
-      color: @fun;
+      color: @campus;
     }
 
   }
 
   &.plan {
     .brick-thumb {
+      &:before {
+        background-image: linear-gradient(-180deg, rgba(213,158,85,0.60) 0%, rgba(224,128,0,0.71) 100%);
+      }
       &:after {
-        background: #f38b00;
+        background: @plan;
       }
     }
     h2 {
-      color: #f38b00;
+      color: @plan;
     }
   }
 
   &.live {
     .brick-thumb {
+      &:before {
+        background-image: linear-gradient(-180deg, rgba(131,213,80,0.60) 0%, rgba(55,121,11,0.71) 100%);
+      }
       &:after {
-        background: #58a229;
+        background: @live;
       }
     }
     h2 {
-      color: #58a229;
+      color: @live;
     }
   }
 
   &.fun {
    .brick-thumb {
+     &:before {
+       background-image: linear-gradient(-180deg, rgba(216,95,113,0.60) 0%, rgba(158,8,31,0.71) 100%);
+     }
       &:after {
-        background: #cb1d38;
+        background: @fun;
      }
     }
     h2 {
-      color: #cb1d38;
+      color: @fun;
     }
   }
 
   &.career {
     .brick-thumb {
+      &:before {
+        background-image: linear-gradient(-180deg, rgba(135,46,191,0.60) 0%, rgba(45,10,80,0.71) 100%);
+      }
       &:after {
-        background: #50158b;
+        background: @career;
       }
     }
     h2 {
-      color: #50158b;
+      color: @career;
     }
   }
 
   &.enrol {
     .brick-thumb {
+      &:before {
+        background-image: linear-gradient(-180deg, rgba(73,117,211,0.60) 0%, rgba(9,34,90,0.71) 100%);
+      }
       &:after {
         background: #23499c;
       }

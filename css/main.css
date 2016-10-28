@@ -1734,3 +1734,6 @@ blockquote cite:before {
 #contact .contact .contact-content .half p.map-link {
   margin-top: 0.5rem;
 }
+#contact .contact .contact-content .alert {
+  width: 100%;
+}

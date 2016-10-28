@@ -10,17 +10,6 @@
   box-sizing: border-box;
 }
 
-em {
-  font-style: italic;
-}
-
-sup {
-  font-size: 0.8rem;
-  margin-top: -0.4rem;
-  margin-left: 0.4rem;
-  position: absolute;
-  display: inline-block;
-}
 
 html:before,html:after,body:before,body:after{
     content:"";
@@ -72,6 +61,18 @@ section {
   margin-top: 2rem;
 }
 
+a[href*="//"]:not([href*="ubc.ca"]) {
+  padding-right: 1.4rem;
+  position: relative;
+  &:after {
+    content: url('images/icon-external-link.svg');
+    width: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    top: -0.15rem;
+    position: absolute;
+  }
+}
 
 /*
 /* header
@@ -838,7 +839,6 @@ blockquote {
 /* alerts
 */
 
-#alerts {
   .alert {
     margin-bottom: 2rem;
     .alert-header {
@@ -846,6 +846,11 @@ blockquote {
       border-radius: 3px 3px 0 0;
       border-width: 1px;
       border-style: solid;
+      h4 {
+        color: @white;
+        margin-bottom: 0;
+        font-weight: 400;
+      }
     }
     .alert-content {
       padding: 1rem 3rem 1rem 1rem;
@@ -854,16 +859,28 @@ blockquote {
       background: @white;
       border-top: none;
       border-radius: 0 0 3px 3px ;
+      display: flex;
+      flex: 1 1;
+      flex-direction: row;
+        @media (max-width: 900px) {
+          flex-direction: column;
+        }
+      p {
+        padding-right: 2rem;
+        flex: 2 0 0;
+      }
+      div {
+        flex: 1 0 0;
+        text-align: right;
+        @media (max-width: 900px) {
+          text-align: left;
+        }
+      }
     }
     &.page-alert {
       .alert-header {
         background: @fun;
         border-color: @fun;
-        h4 {
-          color: @white;
-          margin-bottom: 0;
-
-        }
       }
       .alert-content {
         border-color: @fun;
@@ -877,7 +894,6 @@ blockquote {
         }
         h4 {
           color: @campus;
-          margin-bottom: 0;
         }
         .alert-content {
           border-color: @campus;
@@ -890,7 +906,6 @@ blockquote {
         }
         h4 {
           color: @plan;
-          margin-bottom: 0;
         }
         .alert-content {
           border-color: @plan;
@@ -903,7 +918,6 @@ blockquote {
         }
         h4 {
           color: @live;
-          margin-bottom: 0;
         }
         .alert-content {
           border-color: @live;
@@ -916,7 +930,6 @@ blockquote {
         }
         h4 {
           color: @fun;
-          margin-bottom: 0;
         }
         .alert-content {
           border-color: @fun;
@@ -929,7 +942,6 @@ blockquote {
         }
         h4 {
           color: @career;
-          margin-bottom: 0;
         }
         .alert-content {
           border-color: @career;
@@ -942,7 +954,6 @@ blockquote {
         }
         h4 {
           color: @enrol;
-          margin-bottom: 0;
         }
         .alert-content {
           border-color: @enrol;
@@ -950,7 +961,7 @@ blockquote {
       }
     }
   }
-}
+
 
   .section-inverse {
     background: @lightgrey;
@@ -1499,6 +1510,64 @@ blockquote {
       }
       h2 {
         color: @campus;
+      }
+    }
+  }
+}
+
+/* Contact * */
+#contact {
+  .contact {
+    margin-bottom: 2rem;
+    .contact-header {
+      padding: 1rem 3rem 1rem 1rem;
+      border-radius: 3px 3px 0 0;
+      background: @ubc;
+      h4 {
+        color: @white;
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+    }
+    .contact-content {
+      padding: 1rem 1rem 1rem 1rem;
+      border: 1px solid @lightgrey;
+      background: @white;
+      border-top: none;
+      border-radius: 0 0 3px 3px;
+      display: flex;
+      flex-flow: row wrap;
+      @media (max-width: 900px) {
+        flex-direction: column;
+      }
+      .half {
+        width: calc(~"50% - 2rem");
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+        flex: 1 0 50%;
+        border-bottom: 1px solid @lightgrey;
+        @media (max-width: 900px) {
+          width: 100%;
+        }
+        &:last-of-type {
+          padding-right: 0;
+        }
+        &:nth-last-of-type(-n+2) {
+          border-bottom: none;
+          margin-bottom: 0rem;
+          padding-bottom: 0;
+          @media (max-width: 900px) {
+            border-bottom: none;
+            margin-bottom: 2rem;
+            padding-bottom: 0;
+          }
+        }
+        p {
+          margin-bottom: -0rem;
+          &.map-link {
+            margin-top: 0.5rem;
+          }
+        }
       }
     }
   }

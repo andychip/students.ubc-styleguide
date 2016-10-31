@@ -435,11 +435,11 @@ section {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
-a[href*="//"]:not([href*="ubc.ca"]) {
+p a[href*="//"]:not([href*="ubc.ca"]) {
   padding-right: 1.4rem;
   position: relative;
 }
-a[href*="//"]:not([href*="ubc.ca"]):after {
+p a[href*="//"]:not([href*="ubc.ca"]):after {
   content: url('images/icon-external-link.svg');
   width: 1rem;
   padding-right: 0.5rem;

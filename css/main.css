@@ -807,35 +807,34 @@ a.btn-large:after {
 #links a.campus {
   color: #1594a6;
 }
-#links .link-list--images {
+#links .link-list--title {
   width: 300px;
   margin-bottom: 2rem;
 }
-#links .link-list--images li {
+#links .link-list--title li {
   min-height: 48px;
 }
-#links .link-list--images li a {
+#links .link-list--title li a {
   display: flex;
   -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   align-items: center;
   border-top: 1px solid #eeeeee;
+  padding-top: 1rem;
 }
-#links .link-list--images li a > img {
+#links .link-list--title li:first-of-type a {
+  border-top: none;
+}
+#links .link-list--title li p {
   display: inline-block;
+  line-height: 1.3rem;
+  margin-bottom: 1rem;
 }
-#links .link-list--images li a p {
-  display: inline-block;
-  margin-left: 1rem;
-  width: 220px;
-  line-height: 1em;
-  margin-bottom: 0;
-}
-#links .link-list--images.campus li a {
+#links .link-list--title.campus li a {
   color: #1594a6;
 }
-#links .link-list--images.campus p {
+#links .link-list--title.campus p {
   color: #1594a6;
 }
 #links .visited.campus {
@@ -1293,6 +1292,8 @@ blockquote cite:before {
   display: inline-block;
   margin-bottom: 0;
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
 }
 #brick .brick-thumb img {
   display: block;
@@ -1420,6 +1421,10 @@ blockquote cite:before {
 }
 #brick .brick-item--small .brick-title a:hover {
   text-decoration: underline;
+}
+#brick .brick-item--medium-contained {
+  width: 220px;
+  height: 200px;
 }
 #brick .brick-item--medium-contained .brick-meta {
   left: 0.4rem !important;
@@ -1669,6 +1674,7 @@ blockquote cite:before {
 }
 #profile .brick-item--profile.campus .brick-thumb:after {
   background: #1594a6;
+  width: 0;
 }
 #profile .brick-item--profile.campus h2 {
   color: #1594a6;

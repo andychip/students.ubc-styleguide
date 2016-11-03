@@ -12,7 +12,6 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   position: relative;
   color: @ubc;
-
 }
 
 h1 {
@@ -71,18 +70,18 @@ h4 {
   margin-bottom: 1em;
   text-align: left;
   overflow: hidden;
-    &:after {
-      border-top: 1px solid @lightgrey;
-      content:'';
-      display: inline-block;
-      height: 0.4em;
-      width: 100%;
-      margin-right: -100%;
-      margin-left: 10px;
-   }
-   &:after {
-     left: 2.5%;
-   }
+  &:after {
+    border-top: 1px solid #eeeeee;
+    content: '';
+    display: inline-block;
+    height: 0.4em;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+  }
+  &:after {
+    left: 2.5%;
+  }
   @media screen and (min-width: 769px) {
     font-size: 1.250rem;
     line-height: 1.9375rem;

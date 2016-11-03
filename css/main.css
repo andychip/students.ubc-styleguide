@@ -243,6 +243,20 @@ h3 {
 h4 {
   font-weight: 600;
   margin-bottom: 1em;
+  text-align: left;
+  overflow: hidden;
+}
+h4:after {
+  border-top: 1px solid #eeeeee;
+  content: '';
+  display: inline-block;
+  height: 0.4em;
+  width: 100%;
+  margin-right: -100%;
+  margin-left: 10px;
+}
+h4:after {
+  left: 2.5%;
 }
 @media screen and (min-width: 769px) {
   h4 {
@@ -942,54 +956,6 @@ a.btn-large:after {
 #lists .theme-list li {
   background: url(images/li-theme-list-live.svg) no-repeat left top;
   padding-left: 2.5rem;
-}
-/*
-/* sections
-*/
-#sections hr {
-  margin: 2rem 0;
-  background: #eeeeee;
-  color: #eeeeee;
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #eeeeee;
-}
-#sections .separator-header {
-  text-align: center;
-  position: relative;
-  display: table;
-  white-space: nowrap;
-  margin-bottom: 2rem;
-}
-#sections .separator-header:before,
-#sections .separator-header:after {
-  border-top: 1px solid #eeeeee;
-  content: '';
-  display: table-cell;
-  position: relative;
-  top: 1rem;
-  width: 40%;
-}
-#sections .separator-header:before {
-  right: 2.5%;
-}
-#sections .separator-header:after {
-  left: 2.5%;
-}
-#sections .section-inverse {
-  background: #eeeeee;
-  padding: 2rem;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
-}
-#sections .section-highlight--career {
-  background: #f8f3fd;
-  padding: 2rem;
-  border-top: 1px solid #e9d9f9;
-  border-bottom: 1px solid #e9d9f9;
-  margin-bottom: 2rem;
 }
 /*
 /* tables

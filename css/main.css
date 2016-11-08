@@ -159,6 +159,8 @@ body {
   font-size: 16px;
   font-family: sans-serif;
   line-height: 1em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 /* min-width: 769px - Major Third
 /* max-width: 768px - Minor Third
@@ -446,8 +448,8 @@ body.fade-out {
   transition: 0.4s opacity;
 }
 section {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 p a[href*="//"]:not([href*="ubc.ca"]) {
   padding-right: 1.4rem;
@@ -1189,44 +1191,6 @@ blockquote cite:before {
 }
 .alert.section-alert.enrol .alert-content {
   border-color: #21499c;
-}
-.section-inverse {
-  background: #eeeeee;
-  padding: 2rem;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
-}
-.section-highlight--career {
-  background: #f8f3fd;
-  padding: 2rem;
-  border-top: 1px solid #e9d9f9;
-  border-bottom: 1px solid #e9d9f9;
-  margin-bottom: 2rem;
-}
-.section-inverse .alert-header h4,
-.section-theme .alert-header h4 {
-  color: #ffffff !important;
-}
-.section-inverse .campus .alert-header,
-.section-theme .campus .alert-header {
-  background: #1594a6 !important;
-}
-.section-inverse .plan .alert-header,
-.section-theme .plan .alert-header {
-  background: #f38b00 !important;
-}
-.section-inverse .live .alert-header,
-.section-theme .live .alert-header {
-  background: #58a229 !important;
-}
-.section-inverse .career .alert-header,
-.section-theme .career .alert-header {
-  background: #50158b !important;
-}
-.section-inverse .enrol .alert-header,
-.section-theme .enrol .alert-header {
-  background: #21499c !important;
 }
 /*
 /* bricks

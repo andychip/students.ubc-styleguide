@@ -333,44 +333,50 @@ a[href="http://google.ca"] {
 */
 
 
-.btn-surround {
+.btn {
+  &:before {
+      width: 4px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      -webkit-transition: all 0.4s cubic-bezier(.93,.05,.69,1);
+      transition: all 0.4s cubic-bezier(.93,.05,.69,1.21);
+      border-radius: 1px 0 0 1px;
+      overflow: hidden;
+      }
+
+    &:hover {
+      color: white !important;
+      border-radius: 2px;
+      &:before {
+        width: 100%;
+        -webkit-transition: all 0.4s cubic-bezier(.93,.05,.69,1);
+        transition: all 0.4s cubic-bezier(.93,.05,.69,1.25);
+        border-radius: 2px;
+        z-index: -1;
+        overflow:hidden;
+        }
+      }
+  margin: 1rem;
+  text-decoration:none;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+  color: #002145;
   background: #fff;
-  z-index: 1;
   display:inline-block;
   position: relative;
   cursor: pointer;
-  text-decoration: none;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  &:after {
-    width: 4px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    content: '';
-    position: absolute;
-    -webkit-transition: all 0.4s cubic-bezier(.93,.05,.69,1);
-    transition: all 0.4s cubic-bezier(.93,.05,.69,1.21);
-    z-index:1;
-    border-radius: 1px 0 0 1px;
-  }
-  &:hover {
-    span {
-      color:white !important;
-      border-radius: 2px;
-    }
-    &:after {
-      width: 100%;
-      -webkit-transition: all 0.4s cubic-bezier(.93,.05,.69,1);
-      transition: all 0.4s cubic-bezier(.93,.05,.69,1.25);
-      border-radius: 2px;
-    }
-  }
+  z-index: 2;
+  overflow: hidden;
+
 
     /* -  themes  - */
 
   &.campus {
-    &:after {
+    &:before {
       background: @campus;
     }
     border: 1px solid @campus;
@@ -380,7 +386,7 @@ a[href="http://google.ca"] {
   }
 
   &.plan {
-    &:after {
+    &:before {
       background: @plan;
     }
     border: 1px solid @plan;
@@ -390,7 +396,7 @@ a[href="http://google.ca"] {
   }
 
   &.live {
-    &:after {
+    &:before {
       background: @live;
     }
     border: 1px solid @live;
@@ -400,7 +406,7 @@ a[href="http://google.ca"] {
   }
 
   &.fun {
-    &:after {
+    &:before {
       background: @fun;
     }
     border: 1px solid @fun;
@@ -410,7 +416,7 @@ a[href="http://google.ca"] {
   }
 
   &.career {
-    &:after {
+    &:before {
       background: @career;
     }
     border: 1px solid @career;
@@ -420,7 +426,7 @@ a[href="http://google.ca"] {
   }
 
   &.enrol {
-    &:after {
+    &:before {
       background: @enrol;
     }
   border: 1px solid @enrol;

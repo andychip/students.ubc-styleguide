@@ -685,101 +685,106 @@ a[href="http://google.ca"]:after {
 /*
 /* buttons
 */
-.btn-surround {
+.btn {
+  margin: 1rem;
+  text-decoration: none;
+  transition: all 0.4s ease-in;
+  color: #002145;
   background: #fff;
-  z-index: 1;
   display: inline-block;
   position: relative;
   cursor: pointer;
-  text-decoration: none;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+  z-index: 2;
+  overflow: hidden;
   /* -  themes  - */
 }
-.btn-surround:after {
+.btn:before {
   width: 4px;
   height: 100%;
   top: 0;
   left: 0;
   content: '';
   position: absolute;
+  z-index: -1;
   -webkit-transition: all 0.4s cubic-bezier(0.93, 0.05, 0.69, 1);
   transition: all 0.4s cubic-bezier(0.93, 0.05, 0.69, 1.21);
-  z-index: 1;
   border-radius: 1px 0 0 1px;
+  overflow: hidden;
 }
-.btn-surround:hover span {
+.btn:hover {
   color: white !important;
   border-radius: 2px;
 }
-.btn-surround:hover:after {
+.btn:hover:before {
   width: 100%;
   -webkit-transition: all 0.4s cubic-bezier(0.93, 0.05, 0.69, 1);
   transition: all 0.4s cubic-bezier(0.93, 0.05, 0.69, 1.25);
   border-radius: 2px;
+  z-index: -1;
+  overflow: hidden;
 }
-.btn-surround.campus {
+.btn.campus {
   border: 1px solid #1594a6;
 }
-.btn-surround.campus:after {
+.btn.campus:before {
   background: #1594a6;
 }
-.btn-surround.campus:focus {
+.btn.campus:focus {
   outline-color: #1594a6;
 }
-.btn-surround.plan {
+.btn.plan {
   border: 1px solid #f38b00;
 }
-.btn-surround.plan:after {
+.btn.plan:before {
   background: #f38b00;
 }
-.btn-surround.plan:focus {
+.btn.plan:focus {
   outline-color: #f38b00;
 }
-.btn-surround.live {
+.btn.live {
   border: 1px solid #58a229;
 }
-.btn-surround.live:after {
+.btn.live:before {
   background: #58a229;
 }
-.btn-surround.live:focus {
+.btn.live:focus {
   outline-color: #58a229;
 }
-.btn-surround.fun {
+.btn.fun {
   border: 1px solid #cb1d38;
 }
-.btn-surround.fun:after {
+.btn.fun:before {
   background: #cb1d38;
 }
-.btn-surround.fun:focus {
+.btn.fun:focus {
   outline-color: #cb1d38;
 }
-.btn-surround.career {
+.btn.career {
   border: 1px solid #50158b;
 }
-.btn-surround.career:after {
+.btn.career:before {
   background: #50158b;
 }
-.btn-surround.career:focus {
+.btn.career:focus {
   outline-color: #50158b;
 }
-.btn-surround.enrol {
+.btn.enrol {
   border: 1px solid #21499c;
 }
-.btn-surround.enrol:after {
+.btn.enrol:before {
   background: #21499c;
 }
-.btn-surround.enrol:focus {
+.btn.enrol:focus {
   outline-color: #21499c;
 }
-.btn-surround span {
+.btn span {
   position: relative;
   z-index: 2;
   cursor: pointer;
   transition: all 0.4s ease-in;
   color: #002145;
 }
-.btn-surround span:hover {
+.btn span:hover {
   color: white;
   transition: all 0.4s ease-in;
 }

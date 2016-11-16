@@ -248,18 +248,6 @@ h4 {
   text-align: left;
   overflow: hidden;
 }
-h4:after {
-  border-top: 1px solid #eeeeee;
-  content: '';
-  display: inline-block;
-  height: 0.4em;
-  width: 100%;
-  margin-right: -100%;
-  margin-left: 10px;
-}
-h4:after {
-  left: 2.5%;
-}
 @media screen and (min-width: 769px) {
   h4 {
     font-size: 1.250rem;
@@ -277,6 +265,18 @@ h4:after {
     font-size: 1.125rem;
     line-height: 1.6875rem;
   }
+}
+.typography h4:after {
+  border-top: 1px solid #eeeeee;
+  content: '';
+  display: inline-block;
+  height: 0.4em;
+  width: 100%;
+  margin-right: -100%;
+  margin-left: 10px;
+}
+.typography h4:after {
+  left: 2.5%;
 }
 h5 {
   text-transform: uppercase;

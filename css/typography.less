@@ -72,18 +72,7 @@ h4 {
   margin-bottom: 1em;
   text-align: left;
   overflow: hidden;
-  &:after {
-    border-top: 1px solid #eeeeee;
-    content: '';
-    display: inline-block;
-    height: 0.4em;
-    width: 100%;
-    margin-right: -100%;
-    margin-left: 10px;
-  }
-  &:after {
-    left: 2.5%;
-  }
+
   @media screen and (min-width: 769px) {
     font-size: 1.250rem;
     line-height: 1.9375rem;
@@ -95,6 +84,21 @@ h4 {
   @media screen and (max-width: 480px) {
     font-size: 1.125rem;
     line-height: 1.6875rem;
+  }
+}
+
+.typography h4 {
+  &:after {
+    border-top: 1px solid #eeeeee;
+    content: '';
+    display: inline-block;
+    height: 0.4em;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+  }
+  &:after {
+    left: 2.5%;
   }
 }
 

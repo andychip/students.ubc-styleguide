@@ -1496,3 +1496,163 @@ blockquote {
     }
   }
 }
+
+
+.tabordion {
+  color: #333;
+  display: block;
+  font-family: arial, sans-serif;
+  margin: auto;
+  position: relative;
+
+   input[name="sections"] {
+      left: -9999px;
+      position: absolute;
+      top: -9999px;
+      }
+    section {
+      //display: block;
+      transition: all 0.6s ease-in;
+      opacity: 1;
+      margin-bottom: 0.6rem;
+      margin-top: 0.6rem;
+      label {
+        border-left: 3px solid transparent;
+        cursor: pointer;
+        display: block;
+        font-size: 0.9em;
+        padding: 0.8rem 0.8rem;
+        position: relative;
+        width: 200px;
+        z-index:100;
+        margin-bottom: 4px;
+        transition: all 0.3s ease-in;
+        ol {
+          margin-left: 0;
+          padding-left:0;
+          li {
+            margin-left: 1rem;
+          padding-left:0;
+          }
+        }
+      }
+
+      article {
+        opacity: 0;
+        //display: none;
+        left: 200px;
+        min-width: 300px;
+        padding: 1rem 2rem 0 2rem;
+        position: absolute;
+        top: 0;
+        transition: all 0.2s ease-in;
+        background: #f7f7f7;
+        min-height: 100%;
+        margin-bottom: 2rem;
+        border-radius: 3px;
+      }
+  }
+  input[name="sections"]:checked + label {
+    background: #f7f7f7;
+    color: #333;
+    border-left: 3px solid;
+    border-radius: 3px 0 0 3px;
+    box-shadow: inset -8px 0 12px -8px rgba(0,0,0,0.2);
+  }
+
+  input[name="sections"]:checked ~ article {
+    //display: block;
+    opacity: 1;
+  }
+
+
+
+
+@media (max-width: 533px) {
+
+  h1 {
+    width: 100%;
+  }
+
+  .tabordion {
+    width: 100%;
+  }
+
+  .tabordion section label {
+    font-size: 1em;
+    width: 160px;
+    border-radius: 3px;
+  }
+
+ .tabordion section article {
+    left: 200px;
+    min-width: 270px;
+  }
+
+
+
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    width: 96%;
+  }
+
+  .tabordion {
+    width: 96%;
+  }
+}
+
+
+@media (min-width: 1366px) {
+  h1 {
+    width: 70%;
+  }
+
+  .tabordion {
+    width: 70%;
+  }
+}
+
+
+
+// ---------- //
+// - Themes - //
+// ---------- //
+  &.campus {
+    input[name="sections"]:checked + label {
+    border-color: #1594a6;
+    }
+  }
+
+  &.plan {
+      input[name="sections-date"]:checked + label {
+    border-color:  #f38b00;
+    }
+  }
+
+  &.live {
+      input[name="sections"]:checked + label {
+    border-color:  #58a229;
+    }
+  }
+
+  &.fun {
+      input[name="sections"]:checked + label {
+    border-color:  #cb1d38;
+    }
+  }
+
+  &.career {
+      input[name="sections"]:checked + label {
+    border-color:  #50158b;
+    }
+  }
+
+  &.enrol {
+      input[name="sections"]:checked + label {
+    border-color:  #23499c;
+    }
+  }
+}

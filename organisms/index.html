@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <title>UBC Students Styleguide - organisms</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.sticky.js"></script>
+
+
+  <script>
+    $(window).load(function(){
+      $(".main-nav").sticky({ topSpacing: 0, widthFromWrapper: false, getWidthFrom: 'main-nav' });
+      /*$('body').removeClass('fade-out');*/
+    });
+
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+<body>
+
+  <header>
+    <img src="../images/ubc-logo.png"
+srcset="../images/ubc-logo.png 1x, ../images/ubc-logo.png 2x, ../images/ubc-logo.png 3x">
+    <h2>students.ubc.ca Styleguide</h2>
+  </header>
+  <div class="wrapper">
+      <div class="main-nav padding-2">
+        <nav>
+          <ul class="">
+            <li><a href="../index.html">💫 Nucleus</a></li>
+            <li><a href="../atoms/index.html">⚛ Atoms</a></li>
+            <li><a href="../molecules/index.html">💧 Molecules</a></li>
+            <li class="active"><a href="#">🌿 Organisms</a>
+              <ul>
+                <li><a href="#vertical-tabs">Vertical Tabs</a></li>
+              </ul>
+            </li>
+            <li><a href="../movement/index.html">💨 Movement</a></li>
+          </ul>
+        </nav>
+      </div>
+    <div class="main-content padding-2">
+      <h1>Organisms</h1>
+      <p>Organisms are a combination of molecules, atoms and nuclei making complex UI components</p>
+      <section id="vertical-tabs">
+        <h2>Vertical Tabs</h2>
+          <div class="tabordion campus">
+    <section id="section1">
+      <input type="radio" name="sections" id="option1" checked>
+      <label for="option1">Make an Appointment</label>
+      <article>
+        <h3>Make an appointment</h3>
+        <p>Contact Access &amp; Diversity to book an appointment with a Diversity Advisor. Appointments should be booked before your start date. We recommend making an appointment as soon as you have been offered admission.</p>
+      </article>
+    </section>
+    <section id="section2">
+      <input type="radio" name="sections" id="option2">
+      <label for="option2">Provide Documentation</label>
+      <article>
+        <h3>Provide Documentation</h3>
+        <p>You will need to provide medical documentation prepared by a professional who is qualified to diagnose your specific disability or medical condition. Disability documentation must:</p>
+
+      </article>
+    </section>
+    <section id="section3">
+      <input type="radio" name="sections" id="option3">
+      <label for="option3">Inform your instructor</label>
+      <article>
+        <h3>Inform your instructor</h3>
+        <p>Your Diversity Advisor-Disability will provide you with a letter outlining your academic accommodations. You must present this to each of your instructors at the beginning of the term. The letter will be issued to you on an annual basis unless you are in academic jeopardy in which case an in-person appointment is required.</p>
+      </article>
+    </section>
+    <section id="section4">
+      <input type="radio" name="sections" id="option4">
+      <label for="option4">Next Steps</label>
+      <article>
+        <h3>Changing your academic accommodations</h3>
+        <p>Meet with your Diversity Advisor to request changes to your academic accommodations. Requests for new accommodations or changes to current ones must be made early in the term. Depending on the nature of the accommodation and the timing of the request, immediate implementation may not be possible.</p>
+
+        <p>Requests for new accommodations or changes to existing ones cannot be considered after:</p>
+
+      </article>
+    </section>
+  </div>
+
+
+
+      </section>
+
+    </div>
+  </div>
+
+</body>
+</html>

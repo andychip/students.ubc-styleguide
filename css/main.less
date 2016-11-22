@@ -1499,9 +1499,7 @@ blockquote {
 
 
 .tabordion {
-  color: #333;
   display: block;
-  font-family: arial, sans-serif;
   margin: auto;
   position: relative;
 
@@ -1517,6 +1515,8 @@ blockquote {
       margin-bottom: 0.6rem;
       margin-top: 0.6rem;
       label {
+        border-top: transparent;
+        border-bottom: transparent;
         border-left: 3px solid transparent;
         cursor: pointer;
         display: block;
@@ -1546,23 +1546,26 @@ blockquote {
         position: absolute;
         top: 0;
         transition: all 0.2s ease-in;
-        background: #f7f7f7;
+        background: @white;
         min-height: 100%;
         margin-bottom: 2rem;
         border-radius: 3px;
+        border: 1px solid @lightgrey;
       }
   }
   input[name="sections"]:checked + label {
-    background: #f7f7f7;
-    color: #333;
+    background: @white;
     border-left: 3px solid;
     border-radius: 3px 0 0 3px;
-    box-shadow: inset -8px 0 12px -8px rgba(0,0,0,0.2);
+    box-shadow: inset -6px 0 12px -6px rgba(0,0,0,0.2);
+    border-top: 1px solid @lightgrey;
+    border-bottom: 1px solid @lightgrey;
   }
 
   input[name="sections"]:checked ~ article {
     //display: block;
     opacity: 1;
+    border-bottom: 1px solid @lightgrey;
   }
 
 
@@ -1622,37 +1625,37 @@ blockquote {
 // ---------- //
   &.campus {
     input[name="sections"]:checked + label {
-    border-color: #1594a6;
+    border-left-color: #1594a6;
     }
   }
 
   &.plan {
       input[name="sections-date"]:checked + label {
-    border-color:  #f38b00;
+    border-left-color:  #f38b00;
     }
   }
 
   &.live {
       input[name="sections"]:checked + label {
-    border-color:  #58a229;
+    border-left-color:  #58a229;
     }
   }
 
   &.fun {
       input[name="sections"]:checked + label {
-    border-color:  #cb1d38;
+    border-left-color:  #cb1d38;
     }
   }
 
   &.career {
       input[name="sections"]:checked + label {
-    border-color:  #50158b;
+    border-left-color:  #50158b;
     }
   }
 
   &.enrol {
       input[name="sections"]:checked + label {
-    border-color:  #23499c;
+    border-left-color:  #23499c;
     }
   }
 }

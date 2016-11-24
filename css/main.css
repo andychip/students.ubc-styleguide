@@ -1742,54 +1742,44 @@ blockquote cite:before {
   opacity: 1;
   border-bottom: 1px solid #eeeeee;
 }
-@media (max-width: 533px) {
+@media (max-width: 800px) {
+  .tabordion {
+    width: 100%;
+  }
   .tabordion h1 {
     width: 100%;
   }
-  .tabordion .tabordion {
-    width: 100%;
-  }
-  .tabordion .tabordion section label {
+  .tabordion section label {
     font-size: 1em;
-    width: 160px;
+    width: 100%;
     border-radius: 3px;
+    display: inline-block;
   }
-  .tabordion .tabordion section article {
-    left: 200px;
-    min-width: 270px;
+  .tabordion section article {
+    position: relative;
+    display: none;
+    left: 0;
   }
-}
-@media (max-width: 768px) {
-  .tabordion h1 {
-    width: 96%;
+  .tabordion input[name="sections"]:checked ~ article {
+    width: 100%;
+    display: block;
   }
-  .tabordion .tabordion {
-    width: 96%;
+  .campus input[name="sections"]:checked + label {
+    border-left-color: #1594a6;
   }
-}
-@media (min-width: 1366px) {
-  .tabordion h1 {
-    width: 70%;
+  .plan input[name="sections-date"]:checked + label {
+    border-left-color: #f38b00;
   }
-  .tabordion .tabordion {
-    width: 70%;
+  .live input[name="sections"]:checked + label {
+    border-left-color: #58a229;
   }
-}
-.tabordion.campus input[name="sections"]:checked + label {
-  border-left-color: #1594a6;
-}
-.tabordion.plan input[name="sections-date"]:checked + label {
-  border-left-color: #f38b00;
-}
-.tabordion.live input[name="sections"]:checked + label {
-  border-left-color: #58a229;
-}
-.tabordion.fun input[name="sections"]:checked + label {
-  border-left-color: #cb1d38;
-}
-.tabordion.career input[name="sections"]:checked + label {
-  border-left-color: #50158b;
-}
-.tabordion.enrol input[name="sections"]:checked + label {
-  border-left-color: #23499c;
+  .fun input[name="sections"]:checked + label {
+    border-left-color: #cb1d38;
+  }
+  .career input[name="sections"]:checked + label {
+    border-left-color: #50158b;
+  }
+  .enrol input[name="sections"]:checked + label {
+    border-left-color: #23499c;
+  }
 }

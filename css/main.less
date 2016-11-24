@@ -1568,55 +1568,38 @@ blockquote {
     border-bottom: 1px solid @lightgrey;
   }
 
+}
 
 
-
-@media (max-width: 533px) {
-
-  h1 {
-    width: 100%;
-  }
-
+@media (max-width: 800px) {
   .tabordion {
     width: 100%;
+    h1 {
+      width: 100%;
+    }
+
+   section label {
+      font-size: 1em;
+      width: 100%;
+      border-radius: 3px;
+      display: inline-block;
+    }
+   section article {
+     position: relative;
+     display: none;
+     left: 0;
+   }
+
+   input[name="sections"]:checked ~ article {
+      width: 100%;
+      display: block;
+
+    }
+
   }
 
-  .tabordion section label {
-    font-size: 1em;
-    width: 160px;
-    border-radius: 3px;
-  }
-
- .tabordion section article {
-    left: 200px;
-    min-width: 270px;
-  }
 
 
-
-}
-
-
-@media (max-width: 768px) {
-  h1 {
-    width: 96%;
-  }
-
-  .tabordion {
-    width: 96%;
-  }
-}
-
-
-@media (min-width: 1366px) {
-  h1 {
-    width: 70%;
-  }
-
-  .tabordion {
-    width: 70%;
-  }
-}
 
 
 

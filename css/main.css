@@ -1742,7 +1742,7 @@ blockquote cite:before {
   opacity: 1;
   border-bottom: 1px solid #eeeeee;
 }
-@media (max-width: 800px) {
+@media (max-width: 769px) {
   .tabordion {
     width: 100%;
   }

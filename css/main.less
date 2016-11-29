@@ -478,7 +478,7 @@ a[href="http://google.ca"] {
 /* Links
 */
 
-#links {
+#links, #links2, #links3 {
   ul, ol {
     margin-bottom: 2rem;
   }
@@ -506,6 +506,7 @@ a[href="http://google.ca"] {
   	    align-items: center;
         border-top: 1px solid @lightgrey;
         padding-top: 1rem;
+
       }
       &:first-of-type {
         a {
@@ -516,6 +517,9 @@ a[href="http://google.ca"] {
         display: inline-block;
         line-height: 1.3rem;
         margin-bottom: 1rem;
+      }
+      .link-list--feed-date {
+        margin-bottom: 0;
       }
     }
     &.campus {
@@ -611,6 +615,28 @@ a[href="http://google.ca"] {
         position: relative;
         top: -2px;
         padding-right: 6px;
+      }
+    }
+  }
+}
+
+#links2 {
+  .link-list--title {
+    li {
+      a {
+        margin-bottom: 0.4rem;
+      }
+    }
+  }
+}
+
+#links3 {
+  .link-list--title {
+    li {
+      margin-bottom: 2rem;
+      a {
+        border-top: none;
+        margin-bottom: 0.4rem;
       }
     }
   }

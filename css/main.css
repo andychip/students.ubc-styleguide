@@ -713,7 +713,6 @@ a[href="http://google.ca"]:after {
 }
 .btn:hover {
   color: white !important;
-  border-radius: 2px;
 }
 .btn:hover:before {
   width: 100%;

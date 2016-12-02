@@ -1413,7 +1413,7 @@ blockquote cite:before {
   line-height: 1.25rem;
 }
 #brick .brick-item--large .brick-title {
-  line-height: 2.3rem;
+  line-height: 2rem;
 }
 #brick .brick-item--small .brick-text {
   margin-left: 0;
@@ -1435,9 +1435,8 @@ blockquote cite:before {
   left: 0.4rem !important;
   top: 0.4rem !important;
 }
-#brick .brick-item--medium-contained h2 {
-  font-size: 1.3rem;
-  line-height: 1.6rem;
+#brick .brick-item--medium-contained h3 {
+  line-height: 2rem;
 }
 #brick .brick-item--medium-contained .brick-detail {
   left: 0.4rem !important;
@@ -1458,8 +1457,8 @@ blockquote cite:before {
   margin-bottom: 0;
   width: 200px;
 }
-#brick .brick-item--medium .brick-text h2,
-#brick .brick-item--small .brick-text h2 {
+#brick .brick-item--medium .brick-text h3,
+#brick .brick-item--small .brick-text h3 {
   margin-top: 0;
   font-size: 1.3rem;
   line-height: 1.6rem;
@@ -1501,6 +1500,9 @@ blockquote cite:before {
 #brick .brick-item--full .brick-link .brick-text .brick-desc {
   width: 60%;
   margin-bottom: 1rem;
+}
+#brick .brick-item--full .brick-link .brick-text .btn {
+  margin-left: 0;
 }
 #brick .brick-item--full .brick-link:hover .brick-thumb:after {
   width: 0px;

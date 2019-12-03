@@ -1,3 +1,4 @@
+@import "https://cloud.typography.com/6804272/781004/css/fonts.css";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -157,7 +158,7 @@ table {
 }
 body {
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: 'Whitney SSm A', 'Whitney SSm B', 'Open Sans', Arial, sans-serif;
   line-height: 1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -232,7 +233,7 @@ h3 {
 }
 @media screen and (max-width: 768px) {
   h3 {
-    font-size: 1.440rem;
+    font-size: 1.44rem;
     line-height: 2.125rem;
   }
 }
@@ -250,7 +251,7 @@ h4 {
 }
 @media screen and (min-width: 769px) {
   h4 {
-    font-size: 1.250rem;
+    font-size: 1.25rem;
     line-height: 1.9375rem;
   }
 }
@@ -308,7 +309,7 @@ h6 {
 }
 @media screen and (min-width: 769px) {
   h6 {
-    font-size: 0.800rem;
+    font-size: 0.8rem;
     line-height: 1.5rem;
   }
 }
@@ -341,7 +342,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   p {
-    line-height: 1.500rem;
+    line-height: 1.5rem;
   }
 }
 .code-block {
@@ -1463,7 +1464,7 @@ blockquote cite:before {
   font-size: 1.3rem;
   line-height: 1.6rem;
   margin-bottom: 1rem;
-  width: calc(98%);
+  width: calc(100% - 2rem);
 }
 #brick .brick-item--medium .brick-text .brick-optional,
 #brick .brick-item--small .brick-text .brick-optional,
@@ -1653,7 +1654,7 @@ blockquote cite:before {
   bottom: 0;
   display: block;
   position: absolute;
-  width: calc(98%);
+  width: calc(100% - 2rem);
   height: 100%;
 }
 #profile .brick-text .brick-meta {

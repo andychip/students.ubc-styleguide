@@ -1,157 +1,191 @@
-@import "palette.less";
+/* Palette */
 body {
   font-size: 16px;
-  font-family: 'Whitney SSm A','Whitney SSm B','Open Sans',Arial,sans-serif;
+  font-family: 'Whitney SSm A', 'Whitney SSm B', 'Open Sans', Arial, sans-serif;
   line-height: 1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-
 /* min-width: 769px - Major Third
 /* max-width: 768px - Minor Third
 /* max-width: 480px - Major Second
 */
-
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   position: relative;
-  color: @ubc;
+  color: #002145;
 }
-
 h1 {
   font-weight: 400;
   margin-bottom: 1em;
-  @media screen and (min-width: 769px) {
+}
+@media screen and (min-width: 769px) {
+  h1 {
     font-size: 2.441rem;
     line-height: 3.3125rem;
   }
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  h1 {
     font-size: 2.074rem;
     line-height: 2.875rem;
   }
-  @media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 480px) {
+  h1 {
     font-size: 1.602rem;
     line-height: 2.1875rem;
   }
 }
-
 h2 {
   font-weight: 400;
   margin-bottom: 1em;
-  @media screen and (min-width: 769px) {
+}
+@media screen and (min-width: 769px) {
+  h2 {
     font-size: 1.953rem;
     line-height: 2.75rem;
   }
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  h2 {
     font-size: 1.728rem;
     line-height: 2.5rem;
   }
-  @media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 480px) {
+  h2 {
     font-size: 1.424rem;
     line-height: 2.0625rem;
   }
 }
-
 h3 {
   font-weight: 600;
   margin-bottom: 1em;
-  @media screen and (min-width: 769px) {
+}
+@media screen and (min-width: 769px) {
+  h3 {
     font-size: 1.563rem;
     line-height: 2.25rem;
   }
-  @media screen and (max-width: 768px) {
-    font-size: 1.440rem;
+}
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 1.44rem;
     line-height: 2.125rem;
   }
-  @media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 480px) {
+  h3 {
     font-size: 1.266rem;
     line-height: 1.8125rem;
   }
 }
-
 h4 {
   font-weight: 600;
   margin-bottom: 1em;
   text-align: left;
   overflow: hidden;
-
-  @media screen and (min-width: 769px) {
-    font-size: 1.250rem;
+}
+@media screen and (min-width: 769px) {
+  h4 {
+    font-size: 1.25rem;
     line-height: 1.9375rem;
   }
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  h4 {
     font-size: 1.2rem;
     line-height: 1.875rem;
   }
-  @media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 480px) {
+  h4 {
     font-size: 1.125rem;
     line-height: 1.6875rem;
   }
 }
-
-.typography h4 {
-  &:after {
-    border-top: 1px solid #eeeeee;
-    content: '';
-    display: inline-block;
-    height: 0.4em;
-    width: 100%;
-    margin-right: -100%;
-    margin-left: 10px;
-  }
-  &:after {
-    left: 2.5%;
-  }
+.typography h4:after {
+  border-top: 1px solid #eeeeee;
+  content: '';
+  display: inline-block;
+  height: 0.4em;
+  width: 100%;
+  margin-right: -100%;
+  margin-left: 10px;
 }
-
+.typography h4:after {
+  left: 2.5%;
+}
 h5 {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 1em;
-  @media screen and (min-width: 769px) {
-    font-size: 1rem;
-    line-height: 1.6875rem;
-
-  }
-  @media screen and (max-width: 768px) {
+}
+@media screen and (min-width: 769px) {
+  h5 {
     font-size: 1rem;
     line-height: 1.6875rem;
   }
-  @media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 768px) {
+  h5 {
+    font-size: 1rem;
+    line-height: 1.6875rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  h5 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
-
 h6 {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 1em;
-  @media screen and (min-width: 769px) {
-    font-size: 0.800rem;
+}
+@media screen and (min-width: 769px) {
+  h6 {
+    font-size: 0.8rem;
     line-height: 1.5rem;
   }
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  h6 {
     font-size: 0.833rem;
     line-height: 1.5rem;
   }
-  @media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 480px) {
+  h6 {
     font-size: 0.889rem;
     line-height: 1.375rem;
   }
 }
-
 p {
   font-size: 1rem;
   margin-bottom: 1rem;
   max-width: 34rem;
-  @media screen and (min-width: 769px) {
+}
+@media screen and (min-width: 769px) {
+  p {
     line-height: 1.6875rem;
   }
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  p {
     line-height: 1.6875rem;
   }
-  @media screen and (max-width: 480px) {
-    line-height: 1.500rem;
+}
+@media screen and (max-width: 480px) {
+  p {
+    line-height: 1.5rem;
   }
 }
 .code-block {
@@ -161,7 +195,7 @@ code {
   font-family: monospace;
   padding: 1rem;
   color: rebeccapurple;
-  border: 1px solid @lightgrey;
+  border: 1px solid #eeeeee;
   display: inline-block;
   white-space: pre;
   margin-bottom: 2rem;
@@ -169,7 +203,6 @@ code {
   max-width: 400px;
   flex: 1;
 }
-
 code.inline {
   padding: 0.2rem;
   display: inline-block;
@@ -178,20 +211,16 @@ code.inline {
   margin-bottom: 0;
   flex: none;
 }
-
 h3 span {
   font-size: 1rem;
   font-weight: 400;
 }
-
 p {
-  color: @ubc;
+  color: #002145;
 }
-
 strong {
   font-weight: 600;
 }
-
 sup {
   font-size: 0.8rem;
   margin-top: -0.4rem;
@@ -199,7 +228,6 @@ sup {
   position: absolute;
   display: inline-block;
 }
-
 em {
   font-style: italic;
 }
